@@ -1,0 +1,20 @@
+version: "1.0"
+stages:
+  - "clone"
+  - "build"
+  - "integration"
+  - "push"
+steps:
+  main_clone:
+    type: "git-clone"
+    description: "Cloning main repository..."
+    repo: "ttu-capstone-podman/homebrew-podman-machine"
+    revision: "${{CF_BRANCH}}"
+    stage: "clone"
+  smoke_test:
+    title: "Quick smoke test"
+    type: "freestyle"
+    arguments:
+      image: "alpine:3.8"
+      commands:
+        - echo "Hello world"
