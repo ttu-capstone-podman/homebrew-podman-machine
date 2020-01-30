@@ -4,7 +4,7 @@ jobs:
       vmImage: macOS-10.14
     steps:
       - bash: |
-          echo "hello world"
+          echo "hello"
           set -e
           sudo xcode-select --switch /Applications/Xcode_10.2.1.app/Contents/Developer
           brew update
