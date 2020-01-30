@@ -1,9 +1,7 @@
 version: "1.0"
 stages:
   - "clone"
-  - "build"
-  - "integration"
-  - "push"
+  - "test"
 steps:
   main_clone:
     type: "git-clone"
@@ -14,6 +12,7 @@ steps:
   smoke_test:
     title: "Quick smoke test"
     type: "freestyle"
+    stage: "test"
     arguments:
       image: "alpine:3.8"
       commands:
