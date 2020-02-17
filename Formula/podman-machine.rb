@@ -9,6 +9,6 @@ class PodmanMachine < Formula
   def install
     mv "podman-machine.darwin-amd64", "podman-machine"
     bin.install "podman-machine"
-    
+ 
   end
 end
