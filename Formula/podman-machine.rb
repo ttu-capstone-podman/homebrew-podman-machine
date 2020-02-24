@@ -11,4 +11,8 @@ class PodmanMachine < Formula
     bin.install "podman-machine"
     
   end
+
+  test do
+    assert_equal "podman-machine version dev, build fb1f15e", shell_output("podman-machine --version")
+  end
 end
