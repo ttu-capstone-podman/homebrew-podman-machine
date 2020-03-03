@@ -14,7 +14,7 @@ jobs:
           ln -s "$PWD" "$HOMEBREW_TAP_DIR"
           brew install podman-machine
           echo podman-machine --version
-          if [[ $(podman-machine --version) == 'podman-mchine version dev, build fb1f15e' ]]
+          if [[ $(podman-machine --version) == 'podman-machine version dev, build fb1f15e' ]]
           then
             echo "test completed successfully"
             exit 0
