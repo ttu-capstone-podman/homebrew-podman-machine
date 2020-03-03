@@ -3,7 +3,7 @@ jobs:
     pool:
       vmImage: macOS-10.14
     steps:
-      -checkout: self
+      - checkout: self
       - bash: |
           set -e
           sudo xcode-select --switch /Applications/Xcode_10.2.1.app/Contents/Developer
