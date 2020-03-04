@@ -3,6 +3,7 @@ jobs:
     pool:
       vmImage: macOS-10.14
     steps:
+      - checkout: self
       - bash: |
           set -e
           sudo xcode-select --switch /Applications/Xcode_10.2.1.app/Contents/Developer
@@ -11,5 +12,13 @@ jobs:
           mkdir -p "$HOMEBREW_TAP_DIR"
           rm -rf "$HOMEBREW_TAP_DIR"
           ln -s "$PWD" "$HOMEBREW_TAP_DIR"
-          brew test-bot
-        displayName: Run brew test-bot
+          brew install podman-machine
+          echo podman-machine --version
+          if [[ $(podman-machine --version) == 'podman-machine version dev, build fb1f15e' ]]
+          then
+            echo "test completed successfully"
+            exit 0
+          fi
+          exit 1
+
+        displayName: Run Podman-install test
