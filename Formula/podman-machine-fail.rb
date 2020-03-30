@@ -1,4 +1,4 @@
-class PodmanMachine < Formula
+class PodmanMachineFail < Formula
   desc ""
   homepage "https://github.com/boot2podman/machine"
   url "https://github.com/boot2podman/machine/releases/download/v0.17/podman-machine.darwin-amd64"
