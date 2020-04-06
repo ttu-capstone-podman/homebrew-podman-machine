@@ -1,14 +1,14 @@
 # ttu-capstone-podman/podman-machine
 
 ## How do I install these formulae?
-`brew install ttu-capstone-podman/podman-machine/<formula>`
+`brew install ttu-capstone-podman/podman-machine/podman-machine`
 
-Or `brew tap ttu-capstone-podman/podman-machine` and then `brew install <formula>`.
+Or `brew tap ttu-capstone-podman/podman-machine` and then `brew install podman-machine`.
 
 Or install via URL (which will not receive updates):
 
 ```
-brew install https://raw.githubusercontent.com/ttu-capstone-podman/homebrew-podman-machine/master/Formula/<formula>.rb
+brew install https://raw.githubusercontent.com/ttu-capstone-podman/homebrew-podman-machine/master/Formula/podman-machine.rb
 
 ```
 ## Dependencies
