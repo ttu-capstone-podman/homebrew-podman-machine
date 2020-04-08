@@ -11,4 +11,12 @@ class PodmanMachine < Formula
     bin.install "podman-machine"
 
   end
+  def caveats; <<~EOS
+  You can install podman to use as a remote option with the command:
+  brew install podman
+  For further information about how to set up varlink for remote access please visit:
+  https://podman.io/blogs/2019/01/16/podman-varlink.html
+EOS
+end
+
 end
