@@ -24,13 +24,13 @@ podman-machine
 Switch between VM's by using 
 
 ```
-podman-machine --driver qemu
+podman-machine create box --driver "qemu"
 
 ```
 or 
 
 ```
-podman-machine --driver virtualbox
+podman-machine create box --driver "virtualbox"
 
 ```
 
